@@ -6,16 +6,16 @@ on:
       - 'feature/*' # match: feature/<anything>, not match: feature/<anything>/<anything>
       - 'feature/**' # match: feature/<anything>, feature/<anything>/<anything>
       - '!feature/ignoreMe'
-    branches-ignore:
-      - master
+    #branches-ignore:
+      #- master
     tags:
       - v1.*
-    tags-ignore:
-      - v2.*
+    #tags-ignore:
+      #- v2.*
     paths:
       - '**.java' # when ever java file is pushed will trigger this workflow
-    paths-ignore:
-      - '.github/'
+    #paths-ignore:
+      #- '.github/'
   pull_request:
     types: [closed, assigned, opened, reopened]
   #schedule:
