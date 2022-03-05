@@ -8,6 +8,13 @@ jobs:
         run: |
           pwd 
           ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "${{ github.token }}"
+          echo "So we can do manually here:" 
+          echo "git clone git@github:$GITHUB_REPOSITORY"
+          echo "git checkout $GITHUB_SHA"
       - name: Checkout Code #This action will clone this repo at this-push commit to current runner working dir
         uses: actions/checkout@v1 #from https://github.com/actions/checkout
       - name: List files after checkout
