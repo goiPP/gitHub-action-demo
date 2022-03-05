@@ -29,7 +29,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"event_type\": \"build\"\n}"
+					"raw": "{\n\t\"event_type\": \"build\",\n\t\"client_payload\": {\n\t\t\"env\": \"production\"\n\t}\n}"
 				},
 				"url": {
 					"raw": "https://api.github.com/repos/goiPP/github-action-demo/dispatches",
