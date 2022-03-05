@@ -12,6 +12,8 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: Payload
+        run: echo ${{ github.event.client_payload.env }}
       - name: List files before checkout #pwd result = /home/runner/work/github-action-demo/github-action-demo, this dir will not have any file from this repo. So we to clone ourselve
         run: |
           pwd 
