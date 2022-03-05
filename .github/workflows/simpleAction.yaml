@@ -4,8 +4,10 @@ on:
   # push:
   pull_request:
     types: [closed, assigned, opened, reopened]
-  schedule:
-    - cron: "0/5 * * * *" # minimum: every 5  mins (can have less), can have multiple cron setting. https://crontab.guru/
+  #schedule:
+   # - cron: "0/5 * * * *" # minimum: every 5  mins (can have less), can have multiple cron setting. https://crontab.guru/
+  repository_dispatch:
+    types: [build]
 jobs:
   run-github-actions:
     runs-on: ubuntu-latest
