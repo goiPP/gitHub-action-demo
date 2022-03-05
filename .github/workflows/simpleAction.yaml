@@ -4,9 +4,13 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: List files
+        run: |
+          pwd
+          ls
       - name: Simple lib JS action
         id: greet
-        uses: actions/hello-world-javascript-action@v1
+        uses: actions/hello-world-javascript-action@v1 #@<commit/branch(not recommended)>
         with:
           who-to-greet: Goi
       - name: Log greetieng time
